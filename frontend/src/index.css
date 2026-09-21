@@ -1,0 +1,148 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Form Styles */
+.form_container {
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.form_container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 24px;
+}
+
+.input_group {
+  margin-bottom: 15px;
+}
+
+.input_group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input_group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #059669;
+}
+
+.btn-update-mode {
+  background-color: #6366f1;
+}
+.btn-update-mode:hover {
+  background-color: #4f46e5;
+}
+
+.list_header {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.list_header h1 {
+  color: #1f2937;
+  font-size: 28px;
+}
+
+/* Card Styles */
+.card_wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card_item {
+  width: 300px;
+  padding: 24px;
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card_item h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  color: #374151;
+}
+
+.card_item .buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.card_item button {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+}
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.btn-update {
+  background-color: #6366f1;
+}
+.btn-update:hover {
+  background-color: #4f46e5;
+}
