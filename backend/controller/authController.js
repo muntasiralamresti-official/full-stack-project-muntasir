@@ -7,6 +7,10 @@ const getAllUsers = async (req, res) => {
 const registration = async (req, res) => {
   try {
     const { username, email, password } = req.body;
+    let image = "";
+    if (req.file) {
+      image = req.file.filename;
+    }
 
     const existedUser = await UserModel.findOne({email: email})
     if(existedUser){
@@ -22,6 +26,7 @@ const registration = async (req, res) => {
       username: username,
       email: email,
       password: password,
+      image: image,
     });
 
     await users.save();
@@ -47,15 +52,20 @@ const userDelete = async (req, res) => {
   
 };
 const userUpdate = async (req, res) => {
-  const id = req.params
-  const {username, email,password} = req.body
-  try {
-    await UserModel.findByIdAndUpdate(id.id,{username, email, password})
-    res.send("update hoice")
-  } catch (error) {
-    res.send("User can't updated")
+  const id = req.params;
+  const { username, email, password } = req.body;
+  
+  let updateData = { username, email, password };
+  if (req.file) {
+    updateData.image = req.file.filename;
   }
   
+  try {
+    await UserModel.findByIdAndUpdate(id.id, updateData);
+    res.send("update hoice");
+  } catch (error) {
+    res.send("User can't updated");
+  }
 };
 
 module.exports = { getAllUsers, registration, userDelete, userUpdate };

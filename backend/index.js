@@ -7,9 +7,12 @@ const dbConfig = require("./config/dbConfig.js");
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const router = require("./route/index.js");
 
+const path = require("path");
+
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const port = process.env.PORT || 8000;
 dbConfig();

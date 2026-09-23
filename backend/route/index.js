@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../controller/authController");
-const authRoute = require("../api/authRoute");
-const api = process.env.BASE_URL || "/";
+const authRoute = require("./api/authRoute");
 
-router.use(api, authRoute);
+router.use("/api/v1", authRoute);
 
 module.exports = router;
