@@ -9,7 +9,7 @@ const registration = async (req, res) => {
     const { username, email, password } = req.body;
     let image = "";
     if (req.file) {
-      image = req.file.filename;
+      image = req.file.path;
     }
 
     const existedUser = await UserModel.findOne({email: email})
@@ -57,7 +57,7 @@ const userUpdate = async (req, res) => {
   
   let updateData = { username, email, password };
   if (req.file) {
-    updateData.image = req.file.filename;
+    updateData.image = req.file.path; // Cloudinary URL
   }
   
   try {

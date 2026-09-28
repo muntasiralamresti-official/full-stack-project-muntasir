@@ -162,10 +162,10 @@ function App() {
         {userList?.map((item, index) => (
           <div key={index} className="card_item">
             {item.image && (
-              <img 
-                src={`http://localhost:8000/uploads/${item.image}`} 
-                alt="Profile" 
-                style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px" }} 
+              <img
+                src={item.image}
+                alt="Profile"
+                style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px" }}
               />
             )}
             <h3>Name: {item.username}</h3>
